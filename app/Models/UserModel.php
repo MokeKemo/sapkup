@@ -48,6 +48,7 @@ class UserModel extends Model
             ->asArray()
             ->where(['email' => $emailAddress])
             ->first();
+            
 
         if (!$user)
             throw new Exception('User does not exist for specified email address');
